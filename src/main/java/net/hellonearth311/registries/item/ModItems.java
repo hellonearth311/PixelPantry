@@ -1,7 +1,8 @@
-package net.hellonearth311.registries;
+package net.hellonearth311.registries.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.hellonearth311.Pixelpantry;
+import net.hellonearth311.registries.item.custom.ChefsKnifeItem;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -25,6 +26,12 @@ public class ModItems {
     public static Item registerFood(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings, int nutrition, float saturation) {
         return register(name, itemFactory, settings.food(new FoodComponent.Builder().nutrition(nutrition).saturationModifier(saturation).build()));
     }
+    // BLOCKS / MACHINES
+
+    // TOOLS
+    public static Item CHEFS_KNIFE = register("chefs-knife", ChefsKnifeItem::new, new Item.Settings().maxDamage(256));
+
+    // CROPS / PLANTS
 
     // tomato
     public static final Item TOMATO = registerFood("tomato", Item::new, new Item.Settings(), 3, 0.25f);
@@ -39,9 +46,32 @@ public class ModItems {
     public static final Item GARLIC_CLOVE = registerFood("garlic-clove", Item::new, new Item.Settings(), 1, 0.1f);
     public static final Item DRIED_GARLIC_CLOVE = register("dried-garlic-clove", Item::new, new Item.Settings());
 
+    // PROCESSED INGREDIENTS
+
+    // garlic items
+    public static final Item MINCED_GARLIC = register("minced-garlic", Item::new, new Item.Settings());
+
+    // DOUBLE PROCESSED INGREDIENTS
+
+    // T1 FOODS
+
+    // T2 FOODS
+
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
                 .register((itemGroup) -> itemGroup.add(ModItems.TOMATO));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
+                .register((itemGroup) -> itemGroup.add(ModItems.TOMATO_SEED));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
+                .register((itemGroup) -> itemGroup.add(ModItems.RED_PEPPER));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
+                .register((itemGroup) -> itemGroup.add(ModItems.RED_PEPPER_SEED));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
+                .register((itemGroup) -> itemGroup.add(ModItems.GARLIC));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
+                .register((itemGroup) -> itemGroup.add(ModItems.GARLIC_CLOVE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
+                .register((itemGroup) -> itemGroup.add(ModItems.DRIED_GARLIC_CLOVE));
     }
 
 }

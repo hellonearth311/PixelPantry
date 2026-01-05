@@ -2,7 +2,7 @@ package net.hellonearth311;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.hellonearth311.registries.ModItems;
+import net.hellonearth311.registries.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
