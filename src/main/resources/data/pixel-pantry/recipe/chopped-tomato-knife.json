@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "pixel-pantry:chefs-knife",
+    "pixel-pantry:tomato"
+  ],
+  "result": {
+    "id": "pixel-pantry:chopped-tomato"
+  }
+}

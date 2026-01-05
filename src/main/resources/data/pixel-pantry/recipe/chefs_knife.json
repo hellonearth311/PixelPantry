@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "   ",
+    " y ",
+    " x "
+  ],
+  "key": {
+    "x": "minecraft:cobblestone",
+    "y": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "pixel-pantry:chefs-knife"
+  }
+}

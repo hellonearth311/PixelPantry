@@ -48,8 +48,9 @@ public class ModItems {
 
     // PROCESSED INGREDIENTS
 
-    // garlic items
     public static final Item MINCED_GARLIC = register("minced-garlic", Item::new, new Item.Settings());
+    public static final Item CHOPPED_TOMATO = register("chopped-tomato", Item::new, new Item.Settings());
+
 
     // DOUBLE PROCESSED INGREDIENTS
 
