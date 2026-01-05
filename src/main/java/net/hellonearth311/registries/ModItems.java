@@ -34,6 +34,11 @@ public class ModItems {
     public static final Item RED_PEPPER = registerFood("red-pepper", Item::new, new Item.Settings(), 2, 0.2f);
     public static final Item RED_PEPPER_SEED = register("red-pepper-seed", Item::new, new Item.Settings());
 
+    // garlic
+    public static final Item GARLIC = register("garlic", Item::new, new Item.Settings());
+    public static final Item GARLIC_CLOVE = registerFood("garlic-clove", Item::new, new Item.Settings(), 1, 0.1f);
+    public static final Item DRIED_GARLIC_CLOVE = register("dried-garlic-clove", Item::new, new Item.Settings());
+
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
                 .register((itemGroup) -> itemGroup.add(ModItems.TOMATO));
