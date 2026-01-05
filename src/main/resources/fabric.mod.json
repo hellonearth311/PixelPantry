@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "pixel-pantry",
+	"version": "${version}",
+	"name": "pixel-pantry",
+	"description": "A complete overhaul of Minecraft’s food system since… well, it’s kinda boring.\n\n",
+	"authors": [
+		"hellonearth311"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pixel-pantry/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hellonearth311.Pixelpantry"
+		],
+		"client": [
+			"net.hellonearth311.PixelpantryClient"
+		],
+		"fabric-datagen": [
+			"net.hellonearth311.PixelpantryDataGenerator"
+		]
+	},
+	"mixins": [
+		"pixel-pantry.mixins.json",
+		{
+			"config": "pixel-pantry.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
