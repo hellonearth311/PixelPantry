@@ -3,9 +3,15 @@ package net.hellonearth311.registries.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.hellonearth311.Pixelpantry;
 import net.hellonearth311.registries.item.custom.ChefsKnifeItem;
+import net.minecraft.component.type.Consumable;
+import net.minecraft.component.type.ConsumableComponent;
+import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -46,33 +52,33 @@ public class ModItems {
     public static final Item GARLIC_CLOVE = registerFood("garlic-clove", Item::new, new Item.Settings(), 1, 0.1f);
     public static final Item DRIED_GARLIC_CLOVE = register("dried-garlic-clove", Item::new, new Item.Settings());
 
+    // onions
+    public static final Item ONION = register("onion", Item::new, new Item.Settings());
+
+    public static final ConsumableComponent ONION_BULB_FOOD_CONSUMABLE_COMPONENT = ConsumableComponents.food()
+            .consumeEffect(new ApplyEffectsConsumeEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 4 * 20, 1), 0.75f))
+            .build();
+    public static final FoodComponent ONION_BULB_FOOD_COMPONENT = new FoodComponent.Builder()
+            .alwaysEdible()
+            .build();
+    public static final Item ONION_BULB = register("onion-bulb", Item::new, new Item.Settings().food(ONION_BULB_FOOD_COMPONENT, ONION_BULB_FOOD_CONSUMABLE_COMPONENT));
+
     // PROCESSED INGREDIENTS
 
     public static final Item MINCED_GARLIC = register("minced-garlic", Item::new, new Item.Settings());
     public static final Item CHOPPED_TOMATO = register("chopped-tomato", Item::new, new Item.Settings());
-
+    public static final Item CHOPPED_ONION = register("chopped-onion", Item::new, new Item.Settings());
 
     // DOUBLE PROCESSED INGREDIENTS
 
     // T1 FOODS
 
+    // add tomato soup (with garlic and onions) and garlic bread (also with onions)
+
     // T2 FOODS
 
     public static void initialize() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
-                .register((itemGroup) -> itemGroup.add(ModItems.TOMATO));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
-                .register((itemGroup) -> itemGroup.add(ModItems.TOMATO_SEED));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
-                .register((itemGroup) -> itemGroup.add(ModItems.RED_PEPPER));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
-                .register((itemGroup) -> itemGroup.add(ModItems.RED_PEPPER_SEED));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
-                .register((itemGroup) -> itemGroup.add(ModItems.GARLIC));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
-                .register((itemGroup) -> itemGroup.add(ModItems.GARLIC_CLOVE));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
-                .register((itemGroup) -> itemGroup.add(ModItems.DRIED_GARLIC_CLOVE));
+        // empty lmao
     }
 
 }

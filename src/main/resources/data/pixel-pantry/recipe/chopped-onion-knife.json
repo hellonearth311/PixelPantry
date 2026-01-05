@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "pixel-pantry:chefs-knife",
+    "pixel-pantry:onion-bulb"
+  ],
+  "result": {
+    "id": "pixel-pantry:chopped-onion"
+  }
+}
