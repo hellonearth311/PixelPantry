@@ -33,6 +33,8 @@ public class ModItemGroups {
             itemGroup.add(ModItems.ONION);
             itemGroup.add(ModItems.ONION_BULB);
             itemGroup.add(ModItems.CHOPPED_ONION);
+            itemGroup.add(ModItems.TOMATO_SOUP);
+            itemGroup.add(ModItems.GARLIC_BREAD);
             itemGroup.add(ModItems.CHEFS_KNIFE);
         });
     }
