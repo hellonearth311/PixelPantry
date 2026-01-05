@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      "pixel-pantry:red-pepper"
+    ]
+  ],
+  "result": {
+    "id": "pixel-pantry:red-pepper-seed",
+    "count": 3
+  }
+}

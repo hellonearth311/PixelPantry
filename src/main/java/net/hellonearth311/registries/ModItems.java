@@ -22,16 +22,17 @@ public class ModItems {
         return item;
     }
 
+    public static Item registerFood(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings, int nutrition, float saturation) {
+        return register(name, itemFactory, settings.food(new FoodComponent.Builder().nutrition(nutrition).saturationModifier(saturation).build()));
+    }
+
     // tomato
-    public static final FoodComponent TOMATO_FOOD_COMPONENT = new FoodComponent.Builder()
-            .nutrition(3)
-            .saturationModifier(0.25f).build();
-
-    public static final Item TOMATO = register("tomato", Item::new, new Item.Settings().food(TOMATO_FOOD_COMPONENT));
-
-    // le seed de tomato
-
+    public static final Item TOMATO = registerFood("tomato", Item::new, new Item.Settings(), 3, 0.25f);
     public static final Item TOMATO_SEED = register("tomato-seed", Item::new, new Item.Settings());
+
+    // red pepper
+    public static final Item RED_PEPPER = registerFood("red-pepper", Item::new, new Item.Settings(), 2, 0.2f);
+    public static final Item RED_PEPPER_SEED = register("red-pepper-seed", Item::new, new Item.Settings());
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
