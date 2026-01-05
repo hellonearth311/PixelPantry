@@ -2,6 +2,7 @@ package net.hellonearth311.registries;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.hellonearth311.Pixelpantry;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -21,7 +22,16 @@ public class ModItems {
         return item;
     }
 
-    public static final Item TOMATO = register("tomato", Item::new, new Item.Settings());
+    // tomato
+    public static final FoodComponent TOMATO_FOOD_COMPONENT = new FoodComponent.Builder()
+            .nutrition(3)
+            .saturationModifier(0.25f).build();
+
+    public static final Item TOMATO = register("tomato", Item::new, new Item.Settings().food(TOMATO_FOOD_COMPONENT));
+
+    // le seed de tomato
+
+    public static final Item TOMATO_SEED = register("tomato-seed", Item::new, new Item.Settings());
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK)
