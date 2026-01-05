@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "pixel-pantry:block/tomato-crop_stage4"
+  }
+}
