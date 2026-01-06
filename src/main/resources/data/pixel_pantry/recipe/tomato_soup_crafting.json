@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "pixel_pantry:minced_garlic",
+    "pixel_pantry:chopped_onion",
+    "pixel_pantry:chopped_tomato",
+    "minecraft:bowl",
+    "minecraft:potion"
+  ],
+  "result": {
+    "id": "pixel_pantry:tomato_soup"
+  }
+}

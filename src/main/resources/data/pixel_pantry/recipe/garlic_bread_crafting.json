@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "pixel_pantry:minced_garlic",
+    "pixel_pantry:chopped_onion",
+    "minecraft:bread"
+  ],
+  "result": {
+    "id": "pixel_pantry:garlic_bread"
+  }
+}

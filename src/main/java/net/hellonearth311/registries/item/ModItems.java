@@ -1,6 +1,6 @@
 package net.hellonearth311.registries.item;
 
-import net.hellonearth311.Pixelpantry;
+import net.hellonearth311.PixelPantry;
 import net.hellonearth311.registries.block.ModBlocks;
 import net.hellonearth311.registries.item.custom.ChefsKnifeItem;
 import net.minecraft.component.type.ConsumableComponent;
@@ -21,7 +21,7 @@ import java.util.function.Function;
 
 public class ModItems {
     private static Item register(String name, Function<Item.Settings, Item> function, Item.Settings settings) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Pixelpantry.MOD_ID, name));
+        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(PixelPantry.MOD_ID, name));
         return Registry.register(Registries.ITEM, key, function.apply(settings.registryKey(key)));
     }
 
@@ -37,23 +37,23 @@ public class ModItems {
     // BLOCKS / MACHINES
 
     // TOOLS
-    public static Item CHEFS_KNIFE = register("chefs-knife", ChefsKnifeItem::new, new Item.Settings().maxDamage(256));
+    public static Item CHEFS_KNIFE = register("chefs_knife", ChefsKnifeItem::new, new Item.Settings().maxDamage(256));
 
     // CROPS / PLANTS
 
     // tomato
     public static final Item TOMATO = registerFood("tomato", 3, 0.25f);
-    public static final Item TOMATO_SEED = register("tomato-seed",
+    public static final Item TOMATO_SEED = register("tomato_seed",
             settings -> new BlockItem(ModBlocks.TOMATO_CROP, settings));
 
     // red pepper
-    public static final Item RED_PEPPER = registerFood("red-pepper", 2, 0.2f);
-    public static final Item RED_PEPPER_SEED = register("red-pepper-seed", Item::new);
+    public static final Item RED_PEPPER = registerFood("red_pepper", 2, 0.2f);
+    public static final Item RED_PEPPER_SEED = register("red_pepper_seed", Item::new);
 
     // garlic
     public static final Item GARLIC = register("garlic", Item::new);
-    public static final Item GARLIC_CLOVE = registerFood("garlic-clove", 1, 0.1f);
-    public static final Item DRIED_GARLIC_CLOVE = register("dried-garlic-clove", Item::new);
+    public static final Item GARLIC_CLOVE = registerFood("garlic_clove", 1, 0.1f);
+    public static final Item DRIED_GARLIC_CLOVE = register("dried_garlic_clove", Item::new);
 
     // onions
     public static final Item ONION = register("onion", Item::new);
@@ -64,19 +64,19 @@ public class ModItems {
     public static final FoodComponent ONION_BULB_FOOD_COMPONENT = new FoodComponent.Builder()
             .alwaysEdible()
             .build();
-    public static final Item ONION_BULB = register("onion-bulb", Item::new, new Item.Settings().food(ONION_BULB_FOOD_COMPONENT, ONION_BULB_FOOD_CONSUMABLE_COMPONENT));
+    public static final Item ONION_BULB = register("onion_bulb", Item::new, new Item.Settings().food(ONION_BULB_FOOD_COMPONENT, ONION_BULB_FOOD_CONSUMABLE_COMPONENT));
 
     // PROCESSED INGREDIENTS
 
-    public static final Item MINCED_GARLIC = register("minced-garlic", Item::new);
-    public static final Item CHOPPED_TOMATO = register("chopped-tomato", Item::new);
-    public static final Item CHOPPED_ONION = register("chopped-onion", Item::new);
+    public static final Item MINCED_GARLIC = register("minced_garlic", Item::new);
+    public static final Item CHOPPED_TOMATO = register("chopped_tomato", Item::new);
+    public static final Item CHOPPED_ONION = register("chopped_onion", Item::new);
 
     // DOUBLE PROCESSED INGREDIENTS
 
     // T1 FOODS
-    public static final Item TOMATO_SOUP = registerFood("tomato-soup", 8, 0.7f);
-    public static final Item GARLIC_BREAD = registerFood("garlic-bread", 7, 0.9f);
+    public static final Item TOMATO_SOUP = registerFood("tomato_soup", 8, 0.7f);
+    public static final Item GARLIC_BREAD = registerFood("garlic_bread", 7, 0.9f);
 
     // T2 FOODS
 

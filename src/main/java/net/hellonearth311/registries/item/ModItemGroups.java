@@ -2,7 +2,7 @@ package net.hellonearth311.registries.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.hellonearth311.Pixelpantry;
+import net.hellonearth311.PixelPantry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -12,10 +12,10 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Pixelpantry.MOD_ID, "item_group"));
+    public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(PixelPantry.MOD_ID, "item_group"));
     public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(ModItems.TOMATO))
-            .displayName(Text.translatable("itemGroup.pixel-pantry"))
+            .displayName(Text.translatable("itemGroup.pixel_pantry"))
             .build();
 
     public static void initialize() {

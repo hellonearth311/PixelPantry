@@ -1,0 +1,18 @@
+{
+  "item.pixel_pantry.tomato": "Tomato",
+  "item.pixel_pantry.tomato_seed": "Tomato Seed",
+  "item.pixel_pantry.red_pepper": "Red Pepper",
+  "item.pixel_pantry.red_pepper_seed": "Red Pepper Seed",
+  "item.pixel_pantry.garlic": "Garlic",
+  "item.pixel_pantry.garlic_clove": "Garlic Clove",
+  "item.pixel_pantry.dried_garlic_clove": "Dried Garlic Clove",
+  "item.pixel_pantry.chefs_knife": "Chef's Knife",
+  "item.pixel_pantry.minced_garlic": "Minced Garlic",
+  "item.pixel_pantry.chopped_tomato": "Chopped Tomato",
+  "item.pixel_pantry.onion": "Onion",
+  "item.pixel_pantry.onion_bulb": "Onion Bulb",
+  "item.pixel_pantry.chopped_onion": "Chopped Onion",
+  "item.pixel_pantry.tomato_soup": "Tomato Soup",
+  "item.pixel_pantry.garlic_bread": "Garlic Bread",
+  "itemGroup.pixel_pantry": "Pixel Pantry"
+}

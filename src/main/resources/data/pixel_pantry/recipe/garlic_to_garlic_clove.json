@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      "pixel_pantry:garlic"
+    ]
+  ],
+  "result": {
+    "id": "pixel_pantry:garlic_clove",
+    "count": 3
+  }
+}
