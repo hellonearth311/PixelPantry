@@ -53,7 +53,8 @@ public class ModItems {
     // garlic
     public static final Item GARLIC = register("garlic", Item::new);
     public static final Item GARLIC_CLOVE = registerFood("garlic_clove", 1, 0.1f);
-    public static final Item DRIED_GARLIC_CLOVE = register("dried_garlic_clove", Item::new);
+    public static final Item DRIED_GARLIC_CLOVE = register("dried_garlic_clove",
+            settings -> new BlockItem(ModBlocks.GARLIC_CROP, settings));
 
     // onions
     public static final Item ONION = register("onion", Item::new);
