@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "ingredient": "pixel_pantry:onion_bulb",
+  "result": {
+    "id": "pixel_pantry:dried_onion_bulb"
+  },
+  "experience": 1,
+  "cookingtime": 100
+}

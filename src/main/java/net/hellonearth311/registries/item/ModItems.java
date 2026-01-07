@@ -66,6 +66,8 @@ public class ModItems {
             .alwaysEdible()
             .build();
     public static final Item ONION_BULB = register("onion_bulb", Item::new, new Item.Settings().food(ONION_BULB_FOOD_COMPONENT, ONION_BULB_FOOD_CONSUMABLE_COMPONENT));
+    public static final Item DRIED_ONION_BULB = register("dried_onion_bulb",
+            settings -> new BlockItem(ModBlocks.ONION_CROP, settings));
 
     // PROCESSED INGREDIENTS
 

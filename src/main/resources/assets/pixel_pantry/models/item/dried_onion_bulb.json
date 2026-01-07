@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pixel_pantry:item/dried_onion_bulb"
+  }
+}

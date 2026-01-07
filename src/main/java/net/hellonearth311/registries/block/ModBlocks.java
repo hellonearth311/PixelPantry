@@ -2,6 +2,7 @@ package net.hellonearth311.registries.block;
 
 import net.hellonearth311.PixelPantry;
 import net.hellonearth311.registries.block.custom.GarlicCropBlock;
+import net.hellonearth311.registries.block.custom.OnionCropBlock;
 import net.hellonearth311.registries.block.custom.TomatoCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -53,6 +54,17 @@ public class ModBlocks {
 
     public static final Block GARLIC_CROP = register("garlic_crop",
             GarlicCropBlock::new,
+            AbstractBlock.Settings.create()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .mapColor(MapColor.EMERALD_GREEN),
+            false);
+
+    public static final Block ONION_CROP = register("onion_crop",
+            OnionCropBlock::new,
             AbstractBlock.Settings.create()
                     .noCollision()
                     .ticksRandomly()

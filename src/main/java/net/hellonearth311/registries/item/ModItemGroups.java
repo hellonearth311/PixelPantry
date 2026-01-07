@@ -32,6 +32,7 @@ public class ModItemGroups {
             itemGroup.add(ModItems.MINCED_GARLIC);
             itemGroup.add(ModItems.ONION);
             itemGroup.add(ModItems.ONION_BULB);
+            itemGroup.add(ModItems.DRIED_ONION_BULB);
             itemGroup.add(ModItems.CHOPPED_ONION);
             itemGroup.add(ModItems.TOMATO_SOUP);
             itemGroup.add(ModItems.GARLIC_BREAD);
